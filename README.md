@@ -1,7 +1,7 @@
 # paperMarkdown
-a paper template based on markdown. 
+a paper template based on markdown.  It's highly recommended to be edited with Typora.
 
-一个markdown论文模板。
+一个markdown论文模板。强烈推荐使用Typora进行写作。
 
 ## About关于本模板
 
@@ -15,5 +15,8 @@ You can use this template in two ways:
 
 ## dictionary 文件目录
 
-\Typora -- Typora的写作模板（包括T一份ypora主题和template.md，需要先将Typora主题导入，然后用template.md写作）  
-\template -- 可直接在本目录下的template.md进行写作
+\Typora -- Typora的写作模板（包括一份Typora主题，需要先将Typora主题导入，然后用template.md写作）
+
+\template.md -- 模板主体的markdown文件
+
+\css -- template.md可能需要的css文件（目前暂时没有，考虑到未来Typora可能收费，需要将此markdown使用任意一款markdown编辑器渲染）
