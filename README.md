@@ -13,6 +13,12 @@ You can use this template in two ways:
 1. 基于Typora：你可以添加本模板的Typora主题，使用Typora进行写作。
 2. 脱离于任何markdown编辑器，将所有样式文件封装在一个目录下，你可在本目录下直接进行写作。
 
+## Typora使用方式
+
+首先进入".\Typora目录"，将".\Typora\Theme"文件夹内的所有文件（包含两个模板paper和strictpaper）复制到Typora的Theme目录下。
+
+然后，重启Typora，选择paper（连续的文档，没有自动分页）或者strictpaper（1级标题自动分页自动分页）主题，打开"template.md"即可写作。
+
 ## dictionary 文件目录
 
 \Typora -- Typora的写作模板（包括一份Typora主题，需要先将Typora主题导入，然后用template.md写作）
