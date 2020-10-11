@@ -2,7 +2,7 @@
 a paper template based on markdown.  It's highly recommended to be edited with Typora.
 
 一个markdown论文模板。强烈推荐使用Typora进行写作。
-![通过Typora导出的PDF文件预览图](https://ftp.bmp.ovh/imgs/2020/10/5c5356498991a94f.jpg)
+<img src="https://ftp.bmp.ovh/imgs/2020/10/5c5356498991a94f.jpg" alt="通过Typora导出的PDF文件预览图" style="zoom: 50%;" />
 
 ## About关于本模板
 
