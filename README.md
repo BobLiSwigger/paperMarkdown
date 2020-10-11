@@ -15,5 +15,5 @@ You can use this template in two ways:
 
 ## dictionary 文件目录
 
-\Typora -- Typora的写作模板（包括T一份ypora主题和template.md，需要先将Typora主题导入，然后用template.md写作）  
+\Typora -- Typora的写作模板（包括T一份ypora主题和template.md，需要先将Typora主题导入，然后用template.md写作）
 \template -- 可直接在本目录下的template.md进行写作
