@@ -91,3 +91,17 @@
 ## 二级标题4-2
 
 `docker run -i -t --name debian -p 80:80 debian:latest`
+
+
+
+## 添加引用
+
+这是一个引用[<sup>1</sup>](#refer-anchor)
+
+可以自动跳转到参考文献
+
+<div id="refer-anchor"></div>
+
+<h3><center>参考文献</center></h3>
+
+[1]  [百度](https://www.baidu.com/)
