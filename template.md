@@ -1,93 +1,56 @@
-<center><font size=8 face="楷体">主标题</font></center>
+<p>
+    <center><font size=8 face="楷体">PaperMarkdown</font></center><br>
+	<center><font size=5 face="楷体">一个简单的Markdown模板</font></center>
+	<center><font face="楷体">Author：BobLi Swigger</font></center>
+	<center><font face="楷体">日期：2020年11月09日</font></center>
+</p>
 
-<center><font size=5 face="楷体">副标题</font></center>
-
-
-
-<center><font face="楷体">作者：BobLi Swigger</font></center>
-
-<center><font face="楷体">课号：0000</font></center>
-
-<center><font face="楷体">日期：2020年10月10日</font></center>
-
-# 目录
+<h1>目录</h1>
 
 [TOC]
 
-# 一级标题1
+# 关于本模板
 
-按照官网给出的教程一步步安装即可，官网给的很详细，不作赘述。
-[https://docs.docker.com/engine/install/debian/](https://docs.docker.com/engine/install/debian/)
+PaperMarkdown是一个简单易用的Markdown模板，你可以用这个模板记课堂笔记、写实验报告，甚至可以用它来写一些要求不太严格的论文！
 
-#　一级标题2
+# 为什么用Markdown
 
-一些可视化的客户端，类似基于git的github desktop或sourcetree等可视化软件。
+虽然Latex功能比Markdown强大，格式严谨，但是，Latex需要编译（我只想写一个实验报告，为什么要学习一门新的语法，甚至还要调试？），Latex的代码渲染非常奇怪（你会发现复制PDF中的代码格式乱的让你头痛）。因此，PaperMarkdown横空出世。
 
-- shipyard
-- dockerUI
-- maDocker
+* 基于Markdown简单的写作方式
+* 最小的文件体积（word和latex哪一个能比我占空间小？）
+* 比word更优秀的数学公式渲染
+* 比word和Latex更优秀的代码渲染（word有语法高亮？Latex的PDF代码复制有多乱？）
 
-# 一级标题3
+# 插入任何你想插入的东西
 
-## 二级标题3-1
+## 图片
 
-**docker的镜像由分层的文件系统组成。**
+如果你想要插入图片，如[图2-1](#Fig:NFA_1)，可以复制这一段代码，来插入你的图片，并添加引用。当然图片下方的标题你可以起任何你喜欢的名字。
 
-- bootfs
-- rootfs
-- 应用层文件系统
+<div id="Fig:NFA_1"><center>
+<img src="https://tse4-mm.cn.bing.net/th/id/OIP.1hBTATaIYbqz9CqJbzrhWgHaE8?pid=Api&rs=1" style="zoom: 80%;" />
+<br>图2-1
+</center></div>
+## 插入表格
 
-第一层（最低端）的文件系统是bootfs（引导文件系统），我们几乎用不到，仅需了解即可。
+如[表3-2](#Table:distinguish)，你可以复制这一段代码插入表格，并随时更改你的表格，你也可以为你的表格添加标题，交叉引用。
 
-第二层文件系统是rootfs，类似于ubuntu等的操作系统。
+<div id="Table:distinguish"></div>
 
-第三层及往上就是各种应用层的文件系统。
+| Pi                 | Pi_new         | Explan                      |
+| ------------------ | -------------- | --------------------------- |
+| $A \rightarrow PE$ |                |                             |
+| {A,B,C,D}{E}       | {A,B,C}{D}{E}  | 用b对{A,B,C,D}分割           |
+| {A,B,C}{D}{E}      | {A,C}{B}{D}{E} | 用b对{A,B,C}分割             |
+| {A,C}{B}{D}{E}     | {A,C}{B}{D}{E} | $\pi = 3.1415926$         |
 
-**值得注意的是，以上这些文件系统都是只读的，因为这些文件系统属于镜像，在docker里面对于镜像是只允许读的。**
+<center>表3-2</center>
 
-像这样多个只读的文件系统层层叠加起来的组合，我们称之为**镜像**
+## 插入...
 
-- 读写层
+你甚至可以插入任何你想插入的东西，当然不是在本文件中集成，而是将它们上传到互联网上，并在Markdown内提供超链接引用任何东西。
 
-**下面我们将介绍docker最为核心的内容之一，write-on-copy。**
+<h3><center>参考文献</center></h3>
 
-对docker容器的所有写操作都发生在读写层的文件系统中，而write-on-copy的概念是是这样定义的：
-
-> 当发生写操作是，我们从下面的只读层复制数据到读写层进行写操作，读写层的数据副本会隐藏只读层的数据。
-
-这样，当我们对容器进行更改时，原有的镜像作为容器的骨架并不会被改变，而是把数据额外分离出一个层次进行存储，类似于git的分布式存储，它的好处是什么？在这里留给读者自己去思考。
-
-通过以上的介绍，我们可以很自然的导出容器的概念：
-
-> 一个由多层文件系统支撑的，独立的运行环境
-
-容器的文件系统=镜像的文件系统+读写层 *#个人暂时的理解，还有待商榷*
-
-那这么多的镜像，我们从哪里拉取呢？
-
-类似于github，docker也提供了dockerhub（一个大仓库）提供人们拉取和推送镜像，而dockerhub运行的镜像就是registry，我们也可以在自己的服务器上搭建私有的docker registry（有点类似于git）。
-
-## 二级标题3-2
-
-类似于github，docker也提供了dockerhub（一个大仓库）提供人们拉取和推送镜像，而dockerhub运行的镜像就是registry，我们也可以在自己的服务器上搭建私有的docker registry（有点类似于git）。
-
-# 一级标题4
-
-## 二级标题4-1
-
-###　三级标题1-1-1
-
-- docker 对docker容器进行的操作;  
-- **ps** 显示正在运行的容器 -a列出所有容器;  
-- **start** 启动一个已经结束的容器;  
-- **stop** 停止一个正在运行的容器;  
-- rm 删除一个已经停止运行的容器;  
-- run 从image创建一个容器并运行; -i -t以交互式shell的方式运行容器; -d以守护进程（后台）的方式运行容器; -p主机端口:容器端口映射;  
-- **commit**提交容器为镜像
-- docker image 对docker镜像进行的操作;  
-- ls 列出本地镜像;  
-- rm 删除本地镜像（空格后加上容器ID&Name）;
-
-## 二级标题4-2
-
-`docker run -i -t --name debian -p 80:80 debian:latest`
+[1]  [百度](https://www.baidu.com/)

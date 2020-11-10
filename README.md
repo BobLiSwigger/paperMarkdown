@@ -1,32 +1,56 @@
-# paperMarkdown
-a paper template based on markdown.  It's highly recommended to be edited with Typora.
+<p>
+    <center><font size=8 face="楷体">PaperMarkdown</font></center><br>
+	<center><font size=5 face="楷体">一个简单的Markdown模板</font></center>
+	<center><font face="楷体">Author：BobLi Swigger</font></center>
+	<center><font face="楷体">日期：2020年11月09日</font></center>
+</p>
 
-一个markdown论文模板。强烈推荐使用Typora进行写作。
+<h1>目录</h1>
 
-## About关于本模板
+[TOC]
 
-You can use this template in two ways:
-1. The first method is based on typora. You should first import the theme into your Typora. Then you can choose to use "template.md" or not.
-2. The second method is independt from any markdown editor. just open the dictionary "\template" and write your idea in "template.md".
+# 关于本模板
 
-本模板有两种使用方式：
-1. 基于Typora：你可以添加本模板的Typora主题，使用Typora进行写作。
-2. 脱离于任何markdown编辑器，将所有样式文件封装在一个目录下，你可在本目录下直接进行写作。
+PaperMarkdown是一个简单易用的Markdown模板，你可以用这个模板记课堂笔记、写实验报告，甚至可以用它来写一些要求不太严格的论文！
 
-## Typora使用方式
+# 为什么用Markdown
 
-首先进入".\Typora目录"，将".\Typora\Theme"文件夹内的所有文件（包含两个模板paper和strictpaper）复制到Typora的Theme目录下。
+虽然Latex功能比Markdown强大，格式严谨，但是，Latex需要编译（我只想写一个实验报告，为什么要学习一门新的语法，甚至还要调试？），Latex的代码渲染非常奇怪（你会发现复制PDF中的代码格式乱的让你头痛）。因此，PaperMarkdown横空出世。
 
-然后，重启Typora，选择paper（连续的文档，没有自动分页）或者strictpaper（1级标题自动分页自动分页）主题，打开"template.md"即可写作。
+* 基于Markdown简单的写作方式
+* 最小的文件体积（word和latex哪一个能比我占空间小？）
+* 比word更优秀的数学公式渲染
+* 比word和Latex更优秀的代码渲染（word有语法高亮？Latex的PDF代码复制有多乱？）
 
-## dictionary 文件目录
+# 插入任何你想插入的东西
 
-\Typora -- Typora的写作模板（包括一份Typora主题，需要先将Typora主题导入，然后用template.md写作）
+## 图片
 
-\template.md -- 模板主体的markdown文件
+如果你想要插入图片，如[图2-1](#Fig:NFA_1)，可以复制这一段代码，来插入你的图片，并添加引用。当然图片下方的标题你可以起任何你喜欢的名字。
 
-\css -- template.md可能需要的css文件（目前暂时没有，考虑到未来Typora可能收费，需要将此markdown使用任意一款markdown编辑器渲染）
+<div id="Fig:NFA_1"><center>
+<img src="https://tse4-mm.cn.bing.net/th/id/OIP.1hBTATaIYbqz9CqJbzrhWgHaE8?pid=Api&rs=1" style="zoom: 80%;" />
+<br>图2-1
+</center></div>
+## 插入表格
 
-## 预览
+如[表3-2](#Table:distinguish)，你可以复制这一段代码插入表格，并随时更改你的表格，你也可以为你的表格添加标题，交叉引用。
 
-<img src="https://ftp.bmp.ovh/imgs/2020/10/5c5356498991a94f.jpg" alt="通过Typora导出的PDF文件预览图" style="zoom: 33%;" />
+<div id="Table:distinguish"></div>
+
+| Pi                 | Pi_new         | Explan                      |
+| ------------------ | -------------- | --------------------------- |
+| $A \rightarrow PE$ |                |                             |
+| {A,B,C,D}{E}       | {A,B,C}{D}{E}  | 用b对{A,B,C,D}分割           |
+| {A,B,C}{D}{E}      | {A,C}{B}{D}{E} | 用b对{A,B,C}分割             |
+| {A,C}{B}{D}{E}     | {A,C}{B}{D}{E} | $\pi = 3.1415926$         |
+
+<center>表3-2</center>
+
+## 插入...
+
+你甚至可以插入任何你想插入的东西，当然不是在本文件中集成，而是将它们上传到互联网上，并在Markdown内提供超链接引用任何东西。
+
+<h3><center>参考文献</center></h3>
+
+[1]  [百度](https://www.baidu.com/)
