@@ -1,14 +1,3 @@
-<p>
-    <center><font size=8 face="楷体">PaperMarkdown</font></center><br>
-	<center><font size=5 face="楷体">一个简单的Markdown模板</font></center>
-	<center><font face="楷体">Author：BobLi Swigger</font></center>
-	<center><font face="楷体">日期：2020年11月09日</font></center>
-</p>
-
-<h1>目录</h1>
-
-[TOC]
-
 # 关于本模板
 
 PaperMarkdown是一个简单易用的Markdown模板，你可以用这个模板记课堂笔记、写实验报告，甚至可以用它来写一些要求不太严格的论文！
@@ -21,6 +10,12 @@ PaperMarkdown是一个简单易用的Markdown模板，你可以用这个模板�
 * 最小的文件体积（word和latex哪一个能比我占空间小？）
 * 比word更优秀的数学公式渲染
 * 比word和Latex更优秀的代码渲染（word有语法高亮？Latex的PDF代码复制有多乱？）
+* 基于HTML：Markdown还不够？你可以直接在Markdown文件里面嵌入HTML代码来控制显示。
+
+# 推荐的编辑器
+
+* Typora：一个暂时还未收费的Markdown编辑器，虽然未来可能收费，但它是我用过最干净Markdown编辑器
+* MarkText：一个开源的Markdown编辑器，和Typora比较像，可能是未来Typora的替代品
 
 # 插入任何你想插入的东西
 

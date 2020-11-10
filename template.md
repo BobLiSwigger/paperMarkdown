@@ -21,6 +21,7 @@ PaperMarkdown是一个简单易用的Markdown模板，你可以用这个模板�
 * 最小的文件体积（word和latex哪一个能比我占空间小？）
 * 比word更优秀的数学公式渲染
 * 比word和Latex更优秀的代码渲染（word有语法高亮？Latex的PDF代码复制有多乱？）
+* 基于HTML：Markdown还不够？你可以直接在Markdown文件里面嵌入HTML代码来控制显示。
 
 # 插入任何你想插入的东西
 
